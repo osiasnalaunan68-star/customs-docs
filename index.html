@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- ─── GOOGLE SEARCH CONSOLE VERIFICATION ─── -->
+    <meta name="google-site-verification" content="jF7lXHaYWiA09WD6rYd3VjSp4dGQQU-tOV2_iJKPtqY" />
+
     <!-- ─── PRIMARY SEO TAGS ─── -->
     <title>Customs Management Platform – Philippines Tariff & Duty Calculator | Osias.org</title>
     <meta name="description" content="Free AHTN tariff classification, customs duty calculator, and trade compliance tool for Philippine importers and customs brokers. Search 11,000+ tariff lines." />
@@ -35,13 +38,14 @@
       "url": "https://customs-v2-nu.vercel.app",
       "author": {
         "@type": "Person",
-        "name": "Osias.org"
-      }
+        "name": "Osias Alcover Nalaunan III",
+        "sameAs": "https://www.facebook.com/profile.php?id=61574317965041"
+      },
+      "dateModified": "2026-06-18"
     }
     </script>
 
     <style>
-        /* ─── RESET & BASE ─── */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', -apple-system, system-ui, sans-serif;
@@ -52,12 +56,10 @@
         }
         .container { max-width: 1100px; margin: 0 auto; }
 
-        /* ─── TYPOGRAPHY ─── */
         h1, h2, h3 { color: #C8972B; }
         h1 { font-size: 2.8rem; font-weight: 700; letter-spacing: -0.02em; }
         .tagline { font-size: 1.4rem; color: #8899AA; margin: 0.5rem 0 2rem; }
 
-        /* ─── CARDS ─── */
         .card {
             background: #0D1F3C;
             border: 1px solid #1E3A5F;
@@ -70,13 +72,11 @@
         .card h2 { margin-top: 0; font-size: 1.6rem; }
         .card h3 { font-size: 1.2rem; margin: 1rem 0 0.3rem; }
 
-        /* ─── LISTS ─── */
         ul, ol { padding-left: 1.5rem; color: #C5CFD9; }
         li { margin-bottom: 0.4rem; }
         a { color: #F0B429; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* ─── BADGES ─── */
         .badge {
             background: #1B4F9B;
             color: white;
@@ -91,22 +91,12 @@
         }
         .badge-gold { background: #C8972B; color: #0A1628; }
 
-        /* ─── GRID ─── */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
         @media (max-width: 700px) {
             .grid-2, .grid-3 { grid-template-columns: 1fr; }
         }
 
-        /* ─── HEADER / LOGO ─── */
         .header {
             display: flex;
             align-items: center;
@@ -127,7 +117,6 @@
         .header-text h1 { margin: 0; }
         .header-text .tagline { margin: 0; font-size: 1.1rem; }
 
-        /* ─── BUTTON ─── */
         .btn {
             display: inline-block;
             background: #C8972B;
@@ -147,7 +136,6 @@
             text-decoration: none;
         }
 
-        /* ─── FOOTER ─── */
         .footer {
             margin-top: 3rem;
             padding-top: 1.5rem;
@@ -156,8 +144,16 @@
             color: #8899AA;
             font-size: 0.9rem;
         }
+        .footer .social { margin-top: 0.5rem; }
+        .footer .social a {
+            color: #F5F7FA;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .footer .social a:hover { transform: scale(1.1); }
 
-        /* ─── LEGAL DISCLAIMER ─── */
         .disclaimer {
             background: #1A1A2E;
             border-left: 4px solid #C8972B;
@@ -168,12 +164,47 @@
         }
         .disclaimer strong { color: #F0B429; }
 
-        /* ─── RESPONSIVE ─── */
+        .developer-card {
+            background: #1A1A2E;
+            border: 1px solid #C8972B33;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .developer-card .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #C8972B33;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #C8972B;
+            border: 2px solid #C8972B;
+        }
+        .developer-card .info { flex: 1; }
+        .developer-card .info h3 { margin: 0; color: #F5F7FA; }
+        .developer-card .info p { color: #8899AA; margin: 0.2rem 0; }
+        .developer-card .info .fb-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1877F2;
+            font-weight: 500;
+        }
+
         @media (max-width: 500px) {
             h1 { font-size: 2rem; }
             .header { flex-direction: column; text-align: center; }
             .logo-container { justify-content: center; }
             .card { padding: 1rem; }
+            .developer-card { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -201,6 +232,10 @@
         <div class="header-text">
             <h1>Customs Management Platform</h1>
             <p class="tagline">Smart Tariff Classification &amp; Duty Computation for Philippine Trade</p>
+            <p style="font-size: 0.9rem; color: #667788;">
+                <span class="badge">Updated: June 18, 2026</span>
+                <span class="badge badge-gold">v2.0</span>
+            </p>
         </div>
     </div>
 
@@ -220,42 +255,15 @@
     <div class="card">
         <h2>✨ Core Features</h2>
         <div class="grid-3">
-            <div>
-                <h3>🔍 HS Lookup</h3>
-                <p>Search over 11,000 AHTN 2022 tariff lines by code, keyword, or description. Instantly see official rates and hierarchical paths.</p>
-            </div>
-            <div>
-                <h3>🧮 Live Duty Calculator</h3>
-                <p>Compute CIF (USD→PHP), customs duty, VAT, BOC fees, and total landed cost in real time with adjustable parameters.</p>
-            </div>
-            <div>
-                <h3>🤖 AI Classifier</h3>
-                <p>Describe your product in plain English – the system suggests a probable HS code with reasoning and confidence level.</p>
-            </div>
-            <div>
-                <h3>🏷️ Species Badges &amp; Filters</h3>
-                <p>Immediate visual identification for live animal codes (horses, cattle, etc.) with a dedicated species dropdown filter.</p>
-            </div>
-            <div>
-                <h3>📊 Hierarchical Path</h3>
-                <p>See the full Chapter → Heading → Subheading structure exactly as in the official tariff book.</p>
-            </div>
-            <div>
-                <h3>🔒 Secure User Accounts</h3>
-                <p>Register and log in with email + password. Your settings and preferences are saved locally.</p>
-            </div>
-            <div>
-                <h3>⚙️ Executive Order Overrides</h3>
-                <p>Manually adjust tariff rates to simulate special EO rates or temporary changes – perfect for what‑if analysis.</p>
-            </div>
-            <div>
-                <h3>📜 Legal &amp; Regulatory Alignment</h3>
-                <p>Built on GIR 1 &amp; 6, CMTA, and official AHTN 2022 data. Includes documentary sufficiency checks for regulated commodities.</p>
-            </div>
-            <div>
-                <h3>🌐 Free &amp; Accessible</h3>
-                <p>Hosted on free tiers (Vercel + Render) – open to everyone. No hidden costs, no subscriptions.</p>
-            </div>
+            <div><h3>🔍 HS Lookup</h3><p>Search over 11,000 AHTN 2022 tariff lines by code, keyword, or description. Instantly see official rates and hierarchical paths.</p></div>
+            <div><h3>🧮 Live Duty Calculator</h3><p>Compute CIF (USD→PHP), customs duty, VAT, BOC fees, and total landed cost in real time with adjustable parameters.</p></div>
+            <div><h3>🤖 AI Classifier</h3><p>Describe your product in plain English – the system suggests a probable HS code with reasoning and confidence level.</p></div>
+            <div><h3>🏷️ Species Badges &amp; Filters</h3><p>Immediate visual identification for live animal codes (horses, cattle, etc.) with a dedicated species dropdown filter.</p></div>
+            <div><h3>📊 Hierarchical Path</h3><p>See the full Chapter → Heading → Subheading structure exactly as in the official tariff book.</p></div>
+            <div><h3>🔒 Secure User Accounts</h3><p>Register and log in with email + password. Your settings and preferences are saved locally.</p></div>
+            <div><h3>⚙️ Executive Order Overrides</h3><p>Manually adjust tariff rates to simulate special EO rates or temporary changes – perfect for what‑if analysis.</p></div>
+            <div><h3>📜 Legal &amp; Regulatory Alignment</h3><p>Built on GIR 1 &amp; 6, CMTA, and official AHTN 2022 data. Includes documentary sufficiency checks for regulated commodities.</p></div>
+            <div><h3>🌐 Free &amp; Accessible</h3><p>Hosted on free tiers (Vercel + Render) – open to everyone. No hidden costs, no subscriptions.</p></div>
         </div>
     </div>
 
@@ -294,34 +302,10 @@
     <div class="card">
         <h2>🛠️ Technology Stack</h2>
         <div class="grid-2">
-            <div>
-                <h3>Frontend</h3>
-                <ul>
-                    <li>React 19 + Vite</li>
-                    <li>Hosted on <strong>Vercel</strong> (free tier)</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Backend</h3>
-                <ul>
-                    <li>FastAPI (Python 3.14)</li>
-                    <li>Hosted on <strong>Render</strong> (free tier)</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Database</h3>
-                <ul>
-                    <li>PostgreSQL (Render free tier)</li>
-                    <li>JWT authentication with werkzeug password hashing</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Tariff Data</h3>
-                <ul>
-                    <li>Parsed from official AHTN 2022 text files</li>
-                    <li>11,118 tariff line records</li>
-                </ul>
-            </div>
+            <div><h3>Frontend</h3><ul><li>React 19 + Vite</li><li>Hosted on <strong>Vercel</strong> (free tier)</li></ul></div>
+            <div><h3>Backend</h3><ul><li>FastAPI (Python 3.14)</li><li>Hosted on <strong>Render</strong> (free tier)</li></ul></div>
+            <div><h3>Database</h3><ul><li>PostgreSQL (Render free tier)</li><li>JWT authentication with werkzeug password hashing</li></ul></div>
+            <div><h3>Tariff Data</h3><ul><li>Parsed from official AHTN 2022 text files</li><li>11,118 tariff line records</li></ul></div>
         </div>
     </div>
 
@@ -339,22 +323,37 @@
         </ol>
     </div>
 
-    <!-- ─── CONTACT ─── -->
+    <!-- ─── DEVELOPER INFO ─── -->
     <div class="card">
-        <h2>📌 About Osias.org</h2>
-        <p>
-            <strong>Osias.org</strong> is a personal initiative to build practical, free, and accessible tools for Philippine trade and customs compliance. 
-            This platform is one of our projects, created with the goal of empowering importers and brokers with technology.
-        </p>
-        <p style="margin-top: 0.8rem;">
-            For feedback, suggestions, or collaboration, feel free to reach out via email:<br />
-            <a href="mailto:osiasnalaunan68@gmail.com" style="font-size: 1.1rem;">osiasnalaunan68@gmail.com</a>
-        </p>
+        <h2>👨‍💻 About the Developer</h2>
+        <div class="developer-card">
+            <div class="avatar">O</div>
+            <div class="info">
+                <h3>Osias Alcover Nalaunan III</h3>
+                <p>🎓 <strong>BSCA</strong> – Bachelor of Science in Customs Administration</p>
+                <p>🏢 <strong>Osias.org</strong> – Founder &amp; Developer</p>
+                <p style="margin-top: 0.5rem;">
+                    <a href="https://www.facebook.com/profile.php?id=61574317965041" target="_blank" class="fb-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                        Facebook Profile
+                    </a>
+                </p>
+            </div>
+        </div>
     </div>
 
     <!-- ─── FOOTER ─── -->
     <div class="footer">
-        &copy; 2026 <strong>Osias.org</strong> &mdash; Built with ❤️ for the Philippine trade community.  
+        &copy; 2026 <strong>Osias.org</strong> &mdash; Built with ❤️ for the Philippine trade community.
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=61574317965041" target="_blank" title="Facebook">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+            </a>
+        </div>
         <br />
         <span style="font-size: 0.8rem; color: #667788;">
             This is an independent tool and is not affiliated with the Bureau of Customs or any government agency.
