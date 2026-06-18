@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://customs-docs.vercel.app/sitemap.xml
