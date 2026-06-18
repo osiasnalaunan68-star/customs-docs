@@ -13,18 +13,24 @@
     <meta name="keywords" content="Philippine customs, AHTN 2022, tariff classification, customs duty calculator, CMTA, import tax calculator, Philippines customs broker, HS code lookup, duty computation, BOC fees, VAT calculator Philippines" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://customs-docs.vercel.app" />
+    <link rel="icon" type="image/png" href="logo.png" />
 
-    <!-- ─── OPEN GRAPH (Social Media) ─── -->
+    <!-- ─── OPEN GRAPH (Social Media Share) ─── -->
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="Customs Management Platform – Philippines Tariff & Duty Calculator" />
     <meta property="og:description" content="Free AHTN tariff classification, customs duty calculator, and trade compliance tool for Philippine importers and customs brokers." />
     <meta property="og:url" content="https://customs-docs.vercel.app" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://customs-docs.vercel.app/og-image.png" />
+    <meta property="og:image" content="https://customs-docs.vercel.app/logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_PH" />
+    <meta property="og:site_name" content="Osias.org - Customs Management Platform" />
 
     <!-- ─── TWITTER CARD ─── -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Customs Management Platform – Philippines Tariff & Duty Calculator" />
     <meta name="twitter:description" content="Free AHTN tariff classification, customs duty calculator, and trade compliance tool for Philippine importers and customs brokers." />
+    <meta name="twitter:image" content="https://customs-docs.vercel.app/logo.png" />
 
     <!-- ─── STRUCTURED DATA (JSON-LD) ─── -->
     <script type="application/ld+json">
@@ -41,7 +47,8 @@
         "name": "Osias Alcover Nalaunan III",
         "sameAs": "https://www.facebook.com/profile.php?id=61574317965041"
       },
-      "dateModified": "2026-06-18"
+      "dateModified": "2026-06-18",
+      "image": "https://customs-docs.vercel.app/logo.png"
     }
     </script>
 
@@ -109,9 +116,12 @@
             align-items: center;
             gap: 0.8rem;
         }
-        .logo-svg {
+        .logo-img {
             width: 80px;
             height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #C8972B;
             flex-shrink: 0;
         }
         .header-text h1 { margin: 0; }
@@ -187,6 +197,12 @@
             font-weight: 700;
             color: #C8972B;
             border: 2px solid #C8972B;
+            overflow: hidden;
+        }
+        .developer-card .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .developer-card .info { flex: 1; }
         .developer-card .info h3 { margin: 0; color: #F5F7FA; }
@@ -211,19 +227,10 @@
 <body>
 <div class="container">
 
-    <!-- ─── HEADER WITH INLINE SVG LOGO ─── -->
+    <!-- ─── HEADER WITH LOGO ─── -->
     <div class="header">
         <div class="logo-container">
-            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#C8972B" />
-                        <stop offset="100%" stop-color="#F0B429" />
-                    </linearGradient>
-                </defs>
-                <circle cx="50" cy="50" r="46" fill="#0D1F3C" stroke="url(#goldGrad)" stroke-width="4" />
-                <text x="50" y="66" font-family="Georgia, serif" font-size="52" font-weight="700" fill="url(#goldGrad)" text-anchor="middle">O</text>
-            </svg>
+            <img src="logo.png" alt="Osias.org Logo" class="logo-img" />
             <div>
                 <span style="font-size: 2rem; font-weight: 300; color: #F5F7FA;">Osias</span>
                 <span style="font-size: 2rem; font-weight: 300; color: #C8972B;">.org</span>
@@ -327,7 +334,9 @@
     <div class="card">
         <h2>👨‍💻 About the Developer</h2>
         <div class="developer-card">
-            <div class="avatar">O</div>
+            <div class="avatar">
+                <img src="logo.png" alt="Osias" />
+            </div>
             <div class="info">
                 <h3>Osias Alcover Nalaunan III</h3>
                 <p>🎓 <strong>BSCA</strong> – Bachelor of Science in Customs Administration</p>
