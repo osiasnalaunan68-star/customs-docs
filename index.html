@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customs Management Platform – by Osias.org</title>
+    <style>
+        /* ─── RESET & BASE ─── */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            background: #0A1628;
+            color: #F5F7FA;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        /* ─── TYPOGRAPHY ─── */
+        h1, h2, h3 { color: #C8972B; }
+        h1 { font-size: 2.8rem; font-weight: 700; letter-spacing: -0.02em; }
+        .tagline { font-size: 1.4rem; color: #8899AA; margin: 0.5rem 0 2rem; }
+
+        /* ─── CARDS ─── */
+        .card {
+            background: #0D1F3C;
+            border: 1px solid #1E3A5F;
+            border-radius: 12px;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+            transition: border-color 0.2s;
+        }
+        .card:hover { border-color: #C8972B55; }
+        .card h2 { margin-top: 0; font-size: 1.6rem; }
+        .card h3 { font-size: 1.2rem; margin: 1rem 0 0.3rem; }
+
+        /* ─── LISTS ─── */
+        ul, ol { padding-left: 1.5rem; color: #C5CFD9; }
+        li { margin-bottom: 0.4rem; }
+        a { color: #F0B429; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ─── BADGES ─── */
+        .badge {
+            background: #1B4F9B;
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .badge-gold { background: #C8972B; color: #0A1628; }
+
+        /* ─── GRID ─── */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 700px) {
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        }
+
+        /* ─── HEADER / LOGO ─── */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .logo-svg {
+            width: 80px;
+            height: 80px;
+            flex-shrink: 0;
+        }
+        .header-text h1 { margin: 0; }
+        .header-text .tagline { margin: 0; font-size: 1.1rem; }
+
+        /* ─── BUTTON ─── */
+        .btn {
+            display: inline-block;
+            background: #C8972B;
+            color: #0A1628;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.15s;
+            text-decoration: none;
+        }
+        .btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px #C8972B44;
+            text-decoration: none;
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #1E3A5F;
+            text-align: center;
+            color: #8899AA;
+            font-size: 0.9rem;
+        }
+        .footer a { color: #C8972B; }
+
+        /* ─── LEGAL DISCLAIMER ─── */
+        .disclaimer {
+            background: #1A1A2E;
+            border-left: 4px solid #C8972B;
+            padding: 1.2rem 1.5rem;
+            border-radius: 6px;
+            color: #BBBBCC;
+            font-size: 0.95rem;
+        }
+        .disclaimer strong { color: #F0B429; }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 500px) {
+            h1 { font-size: 2rem; }
+            .header { flex-direction: column; text-align: center; }
+            .logo-container { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- ─── HEADER WITH INLINE SVG LOGO ─── -->
+    <div class="header">
+        <div class="logo-container">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#C8972B" />
+                        <stop offset="100%" stop-color="#F0B429" />
+                    </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="46" fill="#0D1F3C" stroke="url(#goldGrad)" stroke-width="4" />
+                <text x="50" y="66" font-family="Georgia, serif" font-size="52" font-weight="700" fill="url(#goldGrad)" text-anchor="middle">O</text>
+            </svg>
+            <div>
+                <span style="font-size: 2rem; font-weight: 300; color: #F5F7FA;">Osias</span>
+                <span style="font-size: 2rem; font-weight: 300; color: #C8972B;">.org</span>
+            </div>
+        </div>
+        <div class="header-text">
+            <h1>Customs Management Platform</h1>
+            <p class="tagline">Smart Tariff Classification &amp; Duty Computation for Philippine Trade</p>
+        </div>
+    </div>
+
+    <!-- ─── INTRODUCTION ─── -->
+    <div class="card">
+        <p style="font-size: 1.2rem; color: #D0D8E0;">
+            A powerful, free, and intuitive tool built by <strong>Osias.org</strong> to help importers, customs brokers, 
+            and trade professionals navigate the Philippine Customs Modernization and Tariff Act (CMTA) with ease.
+        </p>
+        <div style="margin-top: 1rem;">
+            <a href="https://customs-v2-nu.vercel.app" target="_blank" class="btn">🚀 Launch Platform</a>
+            <span style="margin-left: 1rem; color: #8899AA;">No login required to explore</span>
+        </div>
+    </div>
+
+    <!-- ─── FEATURES ─── -->
+    <div class="card">
+        <h2>✨ Core Features</h2>
+        <div class="grid-3">
+            <div>
+                <h3>🔍 HS Lookup</h3>
+                <p>Search over 11,000 AHTN 2022 tariff lines by code, keyword, or description. Instantly see official rates and hierarchical paths.</p>
+            </div>
+            <div>
+                <h3>🧮 Live Duty Calculator</h3>
+                <p>Compute CIF (USD→PHP), customs duty, VAT, BOC fees, and total landed cost in real time with adjustable parameters.</p>
+            </div>
+            <div>
+                <h3>🤖 AI Classifier</h3>
+                <p>Describe your product in plain English – the system suggests a probable HS code with reasoning and confidence level.</p>
+            </div>
+            <div>
+                <h3>🏷️ Species Badges &amp; Filters</h3>
+                <p>Immediate visual identification for live animal codes (horses, cattle, etc.) with a dedicated species dropdown filter.</p>
+            </div>
+            <div>
+                <h3>📊 Hierarchical Path</h3>
+                <p>See the full Chapter → Heading → Subheading structure exactly as in the official tariff book.</p>
+            </div>
+            <div>
+                <h3>🔒 Secure User Accounts</h3>
+                <p>Register and log in with email + password. Your settings and preferences are saved locally.</p>
+            </div>
+            <div>
+                <h3>⚙️ Executive Order Overrides</h3>
+                <p>Manually adjust tariff rates to simulate special EO rates or temporary changes – perfect for what‑if analysis.</p>
+            </div>
+            <div>
+                <h3>📜 Legal &amp; Regulatory Alignment</h3>
+                <p>Built on GIR 1 &amp; 6, CMTA, and official AHTN 2022 data. Includes documentary sufficiency checks for regulated commodities.</p>
+            </div>
+            <div>
+                <h3>🌐 Free &amp; Accessible</h3>
+                <p>Hosted on free tiers (Vercel + Render) – open to everyone. No hidden costs, no subscriptions.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── LEGAL & DISCLAIMER ─── -->
+    <div class="card">
+        <h2>📋 Legal Basis &amp; Compliance</h2>
+        <ul>
+            <li><strong>CMTA (Customs Modernization and Tariff Act)</strong> – Primary customs law of the Philippines.</li>
+            <li><strong>AHTN 2022</strong> – Official tariff schedule adopted by the Bureau of Customs.</li>
+            <li><strong>GIR 1 &amp; 6</strong> – General Rules for the Interpretation of the Harmonized System used for legal classification.</li>
+            <li><strong>Documentary Sufficiency</strong> – For regulated goods (e.g., pure‑bred breeding animals), the system reminds users of required permits (SPSIC, pedigree, etc.) to avoid misdeclaration penalties.</li>
+            <li><strong>Section 1400</strong> – Misclassification can lead to 100‑300% surcharge; this tool helps you avoid that by providing clear classification guidance.</li>
+        </ul>
+        <div class="disclaimer" style="margin-top: 1.2rem;">
+            <strong>⚠️ Important Disclaimer:</strong><br />
+            This platform is a <strong>reference tool</strong> developed by <strong>Osias.org</strong> for educational and informational purposes. 
+            It does <strong>not</strong> replace the official ruling of the Bureau of Customs or a licensed customs broker. 
+            Users are solely responsible for verifying classification and ensuring compliance with all applicable laws and regulations. 
+            Osias.org is not liable for any errors, omissions, or decisions made based on this tool.
+        </div>
+    </div>
+
+    <!-- ─── WHO IS IT FOR ─── -->
+    <div class="card">
+        <h2>👥 Who Should Use This?</h2>
+        <ul>
+            <li><strong>Customs Brokers</strong> – Accelerate classification and duty estimation for clients.</li>
+            <li><strong>Importers &amp; Exporters</strong> – Pre‑clear goods and forecast costs with confidence.</li>
+            <li><strong>Freight Forwarders &amp; Logistics</strong> – Provide accurate quotes and avoid clearance delays.</li>
+            <li><strong>Students &amp; Educators</strong> – Learn the AHTN structure and CMTA rules interactively.</li>
+            <li><strong>Compliance Officers</strong> – Audit and verify tariff classifications across your supply chain.</li>
+        </ul>
+    </div>
+
+    <!-- ─── TECHNOLOGY ─── -->
+    <div class="card">
+        <h2>🛠️ Technology Stack</h2>
+        <div class="grid-2">
+            <div>
+                <h3>Frontend</h3>
+                <ul>
+                    <li>React 19 + Vite</li>
+                    <li>Hosted on <strong>Vercel</strong> (free tier)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Backend</h3>
+                <ul>
+                    <li>FastAPI (Python 3.14)</li>
+                    <li>Hosted on <strong>Render</strong> (free tier)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Database</h3>
+                <ul>
+                    <li>SQLite (development) / PostgreSQL (production planned)</li>
+                    <li>JWT authentication with werkzeug password hashing</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Tariff Data</h3>
+                <ul>
+                    <li>Parsed from official AHTN 2022 text files</li>
+                    <li>11,118 tariff line records</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── HOW TO USE ─── -->
+    <div class="card">
+        <h2>📖 Quick Start Guide</h2>
+        <ol>
+            <li><strong>Visit</strong> <a href="https://customs-v2-nu.vercel.app" target="_blank">customs-v2-nu.vercel.app</a></li>
+            <li><strong>Register</strong> (or login if you already have an account) – email and password (min 6 characters).</li>
+            <li><strong>Explore</strong> the HS Lookup, Calculator, and AI Classifier tabs.</li>
+            <li><strong>Inject</strong> a tariff code from Lookup or AI into the Calculator to see the duty breakdown.</li>
+            <li><strong>Adjust</strong> values (CIF, duty rate) and use the Settings tab to apply EO overrides.</li>
+            <li><strong>Always</strong> cross‑check with official sources before making a final declaration.</li>
+        </ol>
+    </div>
+
+    <!-- ─── CONTACT ─── -->
+    <div class="card">
+        <h2>📌 About Osias.org</h2>
+        <p>
+            <strong>Osias.org</strong> is a personal initiative to build practical, free, and accessible tools for Philippine trade and customs compliance. 
+            This platform is one of our projects, created with the goal of empowering importers and brokers with technology.
+        </p>
+        <p style="margin-top: 0.8rem;">
+            For feedback, suggestions, or collaboration, feel free to reach out via email:<br />
+            <a href="mailto:osiasnalaunan68@gmail.com" style="font-size: 1.1rem;">osiasnalaunan68@gmail.com</a>
+        </p>
+        <p style="margin-top: 0.5rem; color: #8899AA; font-size: 0.9rem;">
+            We also welcome issue reports or pull requests on our <a href="https://github.com/osiasnalaunan68-star/customs-v2" target="_blank">GitHub repository</a>.
+        </p>
+    </div>
+
+    <!-- ─── FOOTER ─── -->
+    <div class="footer">
+        &copy; 2026 <strong>Osias.org</strong> &mdash; Built with ❤️ for the Philippine trade community.  
+        <br />
+        <span style="font-size: 0.8rem; color: #667788;">
+            This is an independent tool and is not affiliated with the Bureau of Customs or any government agency.
+        </span>
+    </div>
+
+</div>
+</body>
+</html>
