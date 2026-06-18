@@ -120,7 +120,6 @@
             color: #8899AA;
             font-size: 0.9rem;
         }
-        .footer a { color: #C8972B; }
 
         /* ─── LEGAL DISCLAIMER ─── */
         .disclaimer {
@@ -138,6 +137,7 @@
             h1 { font-size: 2rem; }
             .header { flex-direction: column; text-align: center; }
             .logo-container { justify-content: center; }
+            .card { padding: 1rem; }
         }
     </style>
 </head>
@@ -275,7 +275,7 @@
             <div>
                 <h3>Database</h3>
                 <ul>
-                    <li>SQLite (development) / PostgreSQL (production planned)</li>
+                    <li>PostgreSQL (Render free tier)</li>
                     <li>JWT authentication with werkzeug password hashing</li>
                 </ul>
             </div>
@@ -298,6 +298,7 @@
             <li><strong>Explore</strong> the HS Lookup, Calculator, and AI Classifier tabs.</li>
             <li><strong>Inject</strong> a tariff code from Lookup or AI into the Calculator to see the duty breakdown.</li>
             <li><strong>Adjust</strong> values (CIF, duty rate) and use the Settings tab to apply EO overrides.</li>
+            <li><strong>Fetch Live</strong> to get the current USD/PHP exchange rate.</li>
             <li><strong>Always</strong> cross‑check with official sources before making a final declaration.</li>
         </ol>
     </div>
@@ -312,9 +313,6 @@
         <p style="margin-top: 0.8rem;">
             For feedback, suggestions, or collaboration, feel free to reach out via email:<br />
             <a href="mailto:osiasnalaunan68@gmail.com" style="font-size: 1.1rem;">osiasnalaunan68@gmail.com</a>
-        </p>
-        <p style="margin-top: 0.5rem; color: #8899AA; font-size: 0.9rem;">
-            We also welcome issue reports or pull requests on our <a href="https://github.com/osiasnalaunan68-star/customs-v2" target="_blank">GitHub repository</a>.
         </p>
     </div>
 
