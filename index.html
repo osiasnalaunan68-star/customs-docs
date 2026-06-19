@@ -7,29 +7,32 @@
     <!-- ─── GOOGLE SEARCH CONSOLE VERIFICATION ─── -->
     <meta name="google-site-verification" content="jF7lXHaYWiA09WD6rYd3VjSp4dGQQU-tOV2_iJKPtqY" />
 
+    <!-- ─── FAVICON & BRANDING ─── -->
+    <link rel="icon" type="image/png" href="logo.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="logo.png" />
+
     <!-- ─── PRIMARY SEO TAGS ─── -->
-    <title>Customs Management Platform – Philippines Tariff & Duty Calculator | Osias.org</title>
-    <meta name="description" content="Free AHTN tariff classification, customs duty calculator, and trade compliance tool for Philippine importers and customs brokers. Search 11,000+ tariff lines." />
+    <title>PH Customs Broker System – Tariff & Duty Simulator | Osias.org</title>
+    <meta name="description" content="Free AHTN tariff classification, customs duty calculator, and CMTA compliance simulation for Philippine importers and customs brokers." />
     <meta name="keywords" content="Philippine customs, AHTN 2022, tariff classification, customs duty calculator, CMTA, import tax calculator, Philippines customs broker, HS code lookup, duty computation, BOC fees, VAT calculator Philippines" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://customs-docs.vercel.app" />
-    <link rel="icon" type="image/png" href="logo.png" />
 
     <!-- ─── OPEN GRAPH (Social Media Share) ─── -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Customs Management Platform – Philippines Tariff & Duty Calculator" />
-    <meta property="og:description" content="Free AHTN tariff classification, customs duty calculator, and trade compliance tool for Philippine importers and customs brokers." />
+    <meta property="og:title" content="PH Customs Broker System & Valuation Simulator" />
+    <meta property="og:description" content="Calculate true landed cost, verify dynamic AHTN tariff codes, and simulate BOC customs cascades instantly." />
     <meta property="og:url" content="https://customs-docs.vercel.app" />
     <meta property="og:image" content="https://customs-docs.vercel.app/logo.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="en_PH" />
-    <meta property="og:site_name" content="Osias.org - Customs Management Platform" />
+    <meta property="og:site_name" content="Osias.org – Customs Tech" />
 
     <!-- ─── TWITTER CARD ─── -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Customs Management Platform – Philippines Tariff & Duty Calculator" />
-    <meta name="twitter:description" content="Free AHTN tariff classification, customs duty calculator, and trade compliance tool for Philippine importers and customs brokers." />
+    <meta name="twitter:title" content="PH Customs Broker System & Valuation Simulator" />
+    <meta name="twitter:description" content="Calculate true landed cost, verify dynamic AHTN tariff codes, and simulate BOC customs cascades instantly." />
     <meta name="twitter:image" content="https://customs-docs.vercel.app/logo.png" />
 
     <!-- ─── STRUCTURED DATA (JSON-LD) ─── -->
@@ -37,51 +40,52 @@
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Customs Management Platform",
-      "description": "AHTN tariff classification, customs duty calculator, and trade compliance tool for Philippine importers and customs brokers.",
+      "name": "PH Customs Broker System",
+      "description": "AHTN tariff classification, customs duty calculator, and CMTA compliance simulation for Philippine importers and customs brokers.",
       "applicationCategory": "BusinessApplication",
-      "operatingSystem": "All",
+      "operatingSystem": "Web",
       "url": "https://customs-v2-nu.vercel.app",
       "author": {
         "@type": "Person",
         "name": "Osias Alcover Nalaunan III",
         "sameAs": "https://www.facebook.com/profile.php?id=61574317965041"
       },
-      "dateModified": "2026-06-18",
+      "dateModified": "2026-06-19",
       "image": "https://customs-docs.vercel.app/logo.png"
     }
     </script>
 
     <style>
+        /* ─── RESET & DARK THEME (Obsidian Noir & Aurum Gold) ─── */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', -apple-system, system-ui, sans-serif;
-            background: #0A1628;
-            color: #F5F7FA;
+            background: #0d0e12;
+            color: #e8edf5;
             line-height: 1.6;
             padding: 2rem 1rem;
         }
         .container { max-width: 1100px; margin: 0 auto; }
 
-        h1, h2, h3 { color: #C8972B; }
+        h1, h2, h3 { color: #d4af37; }
         h1 { font-size: 2.8rem; font-weight: 700; letter-spacing: -0.02em; }
         .tagline { font-size: 1.4rem; color: #8899AA; margin: 0.5rem 0 2rem; }
 
         .card {
-            background: #0D1F3C;
-            border: 1px solid #1E3A5F;
+            background: #12131a;
+            border: 1px solid rgba(212,175,55,0.15);
             border-radius: 12px;
             padding: 1.8rem 2rem;
             margin-bottom: 2rem;
             transition: border-color 0.2s;
         }
-        .card:hover { border-color: #C8972B55; }
+        .card:hover { border-color: rgba(212,175,55,0.4); }
         .card h2 { margin-top: 0; font-size: 1.6rem; }
         .card h3 { font-size: 1.2rem; margin: 1rem 0 0.3rem; }
 
-        ul, ol { padding-left: 1.5rem; color: #C5CFD9; }
+        ul, ol { padding-left: 1.5rem; color: #c5cfd9; }
         li { margin-bottom: 0.4rem; }
-        a { color: #F0B429; text-decoration: none; }
+        a { color: #d4af37; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
         .badge {
@@ -96,7 +100,7 @@
             text-transform: uppercase;
             letter-spacing: 0.03em;
         }
-        .badge-gold { background: #C8972B; color: #0A1628; }
+        .badge-gold { background: #d4af37; color: #0d0e12; }
 
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
         .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
@@ -121,7 +125,7 @@
             height: 80px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #C8972B;
+            border: 2px solid #d4af37;
             flex-shrink: 0;
         }
         .header-text h1 { margin: 0; }
@@ -129,8 +133,8 @@
 
         .btn {
             display: inline-block;
-            background: #C8972B;
-            color: #0A1628;
+            background: #d4af37;
+            color: #0d0e12;
             padding: 0.8rem 2rem;
             border-radius: 8px;
             font-weight: 600;
@@ -142,21 +146,21 @@
         }
         .btn:hover {
             transform: scale(1.02);
-            box-shadow: 0 0 20px #C8972B44;
+            box-shadow: 0 0 20px rgba(212,175,55,0.3);
             text-decoration: none;
         }
 
         .footer {
             margin-top: 3rem;
             padding-top: 1.5rem;
-            border-top: 1px solid #1E3A5F;
+            border-top: 1px solid rgba(212,175,55,0.15);
             text-align: center;
             color: #8899AA;
             font-size: 0.9rem;
         }
         .footer .social { margin-top: 0.5rem; }
         .footer .social a {
-            color: #F5F7FA;
+            color: #e8edf5;
             font-size: 1.5rem;
             margin: 0 0.5rem;
             display: inline-block;
@@ -165,18 +169,18 @@
         .footer .social a:hover { transform: scale(1.1); }
 
         .disclaimer {
-            background: #1A1A2E;
-            border-left: 4px solid #C8972B;
+            background: #1a1a24;
+            border-left: 4px solid #d4af37;
             padding: 1.2rem 1.5rem;
             border-radius: 6px;
-            color: #BBBBCC;
+            color: #bbbbcc;
             font-size: 0.95rem;
         }
-        .disclaimer strong { color: #F0B429; }
+        .disclaimer strong { color: #d4af37; }
 
         .developer-card {
-            background: #1A1A2E;
-            border: 1px solid #C8972B33;
+            background: #1a1a24;
+            border: 1px solid rgba(212,175,55,0.2);
             border-radius: 12px;
             padding: 1.5rem 2rem;
             margin-top: 1rem;
@@ -189,15 +193,9 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: #C8972B33;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #C8972B;
-            border: 2px solid #C8972B;
             overflow: hidden;
+            border: 2px solid #d4af37;
+            flex-shrink: 0;
         }
         .developer-card .avatar img {
             width: 100%;
@@ -205,7 +203,7 @@
             object-fit: cover;
         }
         .developer-card .info { flex: 1; }
-        .developer-card .info h3 { margin: 0; color: #F5F7FA; }
+        .developer-card .info h3 { margin: 0; color: #e8edf5; }
         .developer-card .info p { color: #8899AA; margin: 0.2rem 0; }
         .developer-card .info .fb-link {
             display: inline-flex;
@@ -227,20 +225,20 @@
 <body>
 <div class="container">
 
-    <!-- ─── HEADER WITH LOGO ─── -->
+    <!-- ─── HEADER WITH GOLD SHIELD LOGO ─── -->
     <div class="header">
         <div class="logo-container">
             <img src="logo.png" alt="Osias.org Logo" class="logo-img" />
             <div>
-                <span style="font-size: 2rem; font-weight: 300; color: #F5F7FA;">Osias</span>
-                <span style="font-size: 2rem; font-weight: 300; color: #C8972B;">.org</span>
+                <span style="font-size: 2rem; font-weight: 300; color: #e8edf5;">Osias</span>
+                <span style="font-size: 2rem; font-weight: 300; color: #d4af37;">.org</span>
             </div>
         </div>
         <div class="header-text">
             <h1>Customs Management Platform</h1>
             <p class="tagline">Smart Tariff Classification &amp; Duty Computation for Philippine Trade</p>
             <p style="font-size: 0.9rem; color: #667788;">
-                <span class="badge">Updated: June 18, 2026</span>
+                <span class="badge">Updated: June 19, 2026</span>
                 <span class="badge badge-gold">v2.0</span>
             </p>
         </div>
@@ -248,7 +246,7 @@
 
     <!-- ─── INTRODUCTION ─── -->
     <div class="card">
-        <p style="font-size: 1.2rem; color: #D0D8E0;">
+        <p style="font-size: 1.2rem; color: #d0d8e0;">
             A powerful, free, and intuitive tool built by <strong>Osias.org</strong> to help importers, customs brokers, 
             and trade professionals navigate the Philippine Customs Modernization and Tariff Act (CMTA) with ease.
         </p>
